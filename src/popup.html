@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+  <style>
+    body {
+        margin: 50px;
+    }
+
+    h1 {
+        font: 150%/150% 'Freckle Face', cursive;
+    }
+
+    button {
+        color: #444444;
+        background: #F3F3F3;
+        border: 1px #DADADA solid;
+        padding: 5px 10px;
+        border-radius: 2px;
+        font-weight: bold;
+        font-size: 9pt;
+        outline: none;
+        width: 100%;
+    }
+
+    button:hover {
+        border: 1px #C6C6C6 solid;
+        box-shadow: 1px 1px 1px #EAEAEA;
+        color: #333333;
+        background: #F7F7F7;
+    }
+
+    th {
+      text-align: center;
+    }
+
+    .value {
+      color: #29CB1C;
+    }
+  </style>
+  <h1>ViCiclo</h1>
+
+  <table>
+    <tr>
+      <td>SPREAD:</td>
+      <td class="value" id="SPREAD">0</td>
+    </tr>
+    <tr>
+      <td>LUCRO</td>
+      <td class="value" id="LUCRO">0</td>
+    </tr>
+    <tr>
+      <td>BRL > BTC</td>
+      <td class="value" id="NEG">0</td>
+    </tr>
+    <tr>
+      <td colspan="2" class="btnRun">
+        <button id="view">ver lucro do ciclo</button>
+      </td>
+    </tr>
+  </table>
+  <hr>
+  <table>
+    <thead>
+      <tr>
+        <th>Exchange</th>
+        <th>PIN</th>
+      </tr>
+    </thead>
+    <tr>
+      <td><label>BAT</label></td>
+      <td><input type="password" name="batpin" placeholder="bat pin" maxlength="4"></td>
+    </tr>
+    <tr>
+      <td><label>TEM</label></td>
+      <td><input type="password" name="tempin" placeholder="tem pin" maxlength="4"></td>
+    </tr>
+    <tr>
+      <td><label>NEGOCIE</label></td>
+      <td><input type="password" name="ncpin" placeholder="negocie pin" maxlength="4"></td>
+    </tr>
+    <tr>
+      <td colspan="2" class="btnRun">
+        <button id="run">Rodar ciclo</button>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <script src="popup.js" charset="utf-8"></script>
+</body>
+</html>
