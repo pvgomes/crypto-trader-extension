@@ -5,12 +5,34 @@
 </head>
 <body>
   <style>
+    html {
+          width: 270px;
+          font: normal Arial, sans-serif;
+    }
     body {
-        margin: 50px;
+        margin: 30px;
+    }
+    .zui-table {
+      border: solid 1px #DDEEEE;
+      border-collapse: collapse;
+      border-spacing: 0;
+      font: normal 13px Arial, sans-serif;
+      width: 100%;
     }
 
-    h1 {
-        font: 150%/150% 'Freckle Face', cursive;
+    .zui-table thead th {
+        background-color: #DDEFEF;
+        border: solid 1px #DDEEEE;
+        color: #336B6B;
+        padding: 10px;
+        text-align: left;
+        text-shadow: 1px 1px 1px #fff;
+    }
+    .zui-table tbody td {
+        border: solid 1px #DDEEEE;
+        color: #333;
+        padding: 10px;
+        text-shadow: 1px 1px 1px #fff;
     }
 
     button {
@@ -24,70 +46,78 @@
         outline: none;
         width: 100%;
     }
-
     button:hover {
         border: 1px #C6C6C6 solid;
         box-shadow: 1px 1px 1px #EAEAEA;
         color: #333333;
         background: #F7F7F7;
     }
-
-    th {
-      text-align: center;
-    }
-
     .value {
       color: #29CB1C;
     }
   </style>
-  <h1>ViCiclo</h1>
-
-  <table>
-    <tr>
-      <td>SPREAD:</td>
-      <td class="value" id="SPREAD">0</td>
-    </tr>
-    <tr>
-      <td>LUCRO</td>
-      <td class="value" id="LUCRO">0</td>
-    </tr>
-    <tr>
-      <td>BRL > BTC</td>
-      <td class="value" id="NEG">0</td>
-    </tr>
-    <tr>
-      <td colspan="2" class="btnRun">
-        <button id="view">ver lucro do ciclo</button>
-      </td>
-    </tr>
-  </table>
-  <hr>
-  <table>
-    <thead>
-      <tr>
-        <th>Exchange</th>
-        <th>PIN</th>
-      </tr>
-    </thead>
-    <tr>
-      <td><label>BAT</label></td>
-      <td><input type="password" name="batpin" placeholder="bat pin" maxlength="4"></td>
-    </tr>
-    <tr>
-      <td><label>TEM</label></td>
-      <td><input type="password" name="tempin" placeholder="tem pin" maxlength="4"></td>
-    </tr>
-    <tr>
-      <td><label>NEGOCIE</label></td>
-      <td><input type="password" name="ncpin" placeholder="negocie pin" maxlength="4"></td>
-    </tr>
-    <tr>
-      <td colspan="2" class="btnRun">
-        <button id="run">Rodar ciclo</button>
-      </td>
-    </tr>
+  <h1>Crypto Trader</h1>
+  <p>indicadores</p>
+  <table class="zui-table">
+      <thead>
+          <tr>
+              <th>Exc/Crypto</th>
+              <th>Valor BRL</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>BAT/Eth</td>
+              <td>
+                <span class="value" id="BATVALUE"></span>
+              </td>
+          </tr>
+          <tr>
+              <td>TEM/Bitcoin</td>
+              <td>
+                <span class="value" id="TEMVALUE"></span>
+              </td>
+          </tr>
+          <tr>
+              <td>NC/Bitcoin</td>
+              <td>
+                <span class="value" id="NCVALUE"></span></td>
+              </td>
+          </tr>
+      </tbody>
   </table>
   <br>
+  <p>ciclos de arbitragem</p>
+  <table class="zui-table">
+      <thead>
+          <tr>
+              <th>Ciclo</th>
+              <th>Lucro</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>bat/tem/nc</td>
+              <td>
+                Spread <span class="value" id="SPREADC1"></span>
+                Lucro <span class="value" id="LUCROC1"></span>
+              </td>
+          </tr>
+          <tr>
+              <td>tem/nc</td>
+              <td>
+                Spread <span class="value" id="SPREADC2"></span>
+                Lucro <span class="value" id="LUCROC2"></span>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+  <button id="view">Atualizar indicadores</button>
+  <br><br>
+  <span style="font-size:10px; color: #8e8989">
+    Criado por pvgomes <br>
+    bitcoin donate: 37CTBpdkpA3rqfCvowihxDCcj3ECBgWzWn
+  </span>
   <script src="popup.js" charset="utf-8"></script>
 </body>
 </html>

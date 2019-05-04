@@ -1,3 +1,3 @@
 ### Viciclo
 
-Chrome extension to make cycles at some crypto brokers
+Chrome extension to check C$ Bitcoin and Ethereum current value
